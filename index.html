@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Faster+One|Monofett|Press+Start+2P" rel="stylesheet">
+  <title>Trivia Game</title>
+</head>
+
+<body>
+
+
+  <div class="container">
+    <div class="jumbotron">
+      <h2 id="title">Computer Trivia Game</h2>
+    </div>
+
+    <div id="results">
+      <div>
+        <button id="startbutton" type="button" class="btn btn-primary btn-lg btn-block">CLICK TO START GAME!</button>
+      </div>
+    </div>
+
+    <div id="QUIZ">
+      <form name="quiz" onsubmit="return onSubmit()">
+        <div class="card">
+          <h3 class="mars">When was the first programmable computer invented</h3>
+
+
+          <input type="radio" id="a" name="q1" value="0"> 1933
+          <br>
+          <input type="radio" id="b" name="q1" value="1"> 1948
+          <br>
+          <input type="radio" id="c" name="q1" value="2"> 1952
+          <br>
+          <input type="radio" id="d" name="q1" value="3"> 1938
+          <br>
+          <input type="radio" id="e" name="q1" value="4"> 1942
+          <br>
+
+        </div>
+
+
+        <div class="card">
+          <h3 class="mars">Who invented the internet?</h3>
+
+
+          <input type="radio" id="a" name="q2" value="0"> bill gates and george bush
+          <br>
+          <input type="radio" id="b" name="q2" value="1"> david lee roth 
+          <br>
+          <input type="radio" id="c" name="q2" value="2"> steve jobs and donald trump
+          <br>
+          <input type="radio" id="d" name="q2" value="3"> bob ross
+          <br>
+          <input type="radio" id="e" name="q2" value="4"> vincent cerf and rober kahn 
+          <br>
+
+        </div>
+
+        <div class="card">
+          <h3 class="mars">what is the mouse?</h3>
+
+          <input type="radio" id="a" name="q3" value="0"> a mammal
+          <br>
+          <input type="radio" id="b" name="q3" value="1"> a rodent
+          <br>
+          <input type="radio" id="c" name="q3" value="2"> the device which controls the cursor
+          <br>
+          <input type="radio" id="d" name="q3" value="3"> a small mammal 
+          <br>
+          <input type="radio" id="e" name="q3" value="4"> all of the above
+
+        </div>
+
+        <div class="card">
+          <h3 class="mars">what does DOM stand for?</h3>
+
+
+          <input type="radio" id="a" name="q4" value="0"> Dominic Oscar Murvin
+          <br>
+          <input type="radio" id="b" name="q4" value="1"> Document object model
+          <br>
+          <input type="radio" id="c" name="q4" value="2"> device operating mouse
+          <br>
+          <input type="radio" id="d" name="q4" value="3"> dangerous oversized man
+          <br>
+          <input type="radio" id="e" name="q4" value="4"> drive over manhole
+          <br>
+
+        </div>
+
+        <div class="card">
+          <h3 class="mars">How many keys are typically on a keyboard</h3>
+
+
+          <input type="radio" id="myradio" name="q5" value="0"> 100
+          <br>
+          <input type="radio" id="myradio" name="q5" value="1"> 101
+          <br>
+          <input type="radio" id="myradio" name="q5" value="2"> 113
+          <br>
+          <input type="radio" id="myradio" name="q5" value="3"> 88
+          <br>
+          <input type="radio" id="myradio" name="q5" value="4"> 96
+          <br>
+
+        </div>
+
+        <div id="submit">
+
+          <button type="submit">Submit answers</button>
+
+      </form>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+      <script src="assets/trivia.js"></script>
+</body>
+
+</html>

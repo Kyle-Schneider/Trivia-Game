@@ -1,0 +1,76 @@
+.jumbotron{
+    margin-top: 20px;
+    color:rgb(138, 247, 247);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(http://iimaginestudio.com/images/iis_blog2.jpg);
+    background-position: center;
+}
+
+#title{
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 5px 5px darkgrey;
+}
+
+body{
+    background-image: url(https://image.shutterstock.com/image-photo/equalizer-sound-background-theme-colorful-260nw-111112544.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn{
+    margin-bottom: 6%;
+    background-color:transparent;
+    color:white;
+    font-family: 'Faster One', cursive;
+}
+ 
+#submit{
+    border: solid, grey, 60px;
+    margin: 5px,5px,20px,5px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    color:white;
+    background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/WgeRenM/high-tech-blue-abstract-background-loop_ektkldbr__F0000.png);
+    background-size: contain, cover;
+}
+
+.card{
+    text-align: center;
+    background-color: black; 
+    border:grey,groove,13px;
+    margin-bottom: 5%;
+}
+
+    .mars{
+        background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/V3GIUd5/audio-sound-sine-wave-animation-loop-blue_vyzxuownl__F0000.png);
+        background-size: contain;
+        font-family: 'Press Start 2P', cursive;
+        text-shadow:2px 2px 2px blue;
+        color:white;
+
+    }
+
+form{
+    border: solid, grey, 60px;
+    margin: 5px,5px,20px,5px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    color:white;
+    background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/WgeRenM/high-tech-blue-abstract-background-loop_ektkldbr__F0000.png);
+    background-size: contain, cover;
+    
+}
+
+.done{
+    border: solid, grey, 60px;
+    margin: 5px,5px,20px,5px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    color:white;
+    background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/WgeRenM/high-tech-blue-abstract-background-loop_ektkldbr__F0000.png);
+    background-size: contain, cover;
+}
+
+    
