@@ -4,7 +4,6 @@
 
 
 
-
 console.log("puddin");
 
 //startpage-quiz and timer hidden//
@@ -13,138 +12,136 @@ function startpage() {
 }
 startpage();
 
+var showQuiz = function () {
+    $("#QUIZ").show();
+    playGame();
+};
 //on click quiz and timer appear//
 $("#startbutton").click(function () {
-    $("#QUIZ").show();
-    $("#startbutton").css({"background-color": "blue"});
-   run();
+    showQuiz();
+    $("#startbutton").css({ "background-color": "blue" });
+    run();
+    //resultspage();
+   // timesup();
 });
 
 //console.log(questions[0].correctAnswer);
 
 //countdown timer//
-var number = 30;
+var number = 11;
 var intervalId;
-
+var wins = 0;
+var losses = 0;
+var count = 0;
 
 function run() {
     clearInterval(intervalId);
     intervalId = setInterval(decrement, 1000);
-  }
+}
 
-  function decrement () {
-      number--;
-      $("#startbutton").html(number);
-      if (number === 0) {
-          stop();
-          alert("TIMES UP!");
-         //$("#QUIZ").addClass("done").html("<div>"+"results"+"</div>");
-      }
-  }
+function decrement() {
+    number--;
+    $("#startbutton").html(number);
+    if (number === 0) {
+        stop();
+        timesup();
+        resultspage();
+        
+        
+    }
+}
 
-  function stop() {
-      clearInterval(intervalId);
-  }
+function stop() {
+    clearInterval(intervalId);
+}
 
 //questions array-objects//
-var questions = [    
+var questions = [
     {
-        question1: "when was the first programmable computer invented?",
-        answers: ["1922","1935","1944","1938"],
+        question: "when was the first programmable computer invented?",
+        answers: ["1933", "1948", "1952", "1938", "1942"],
         correctAnswer: 3
     },
-    
+
     {
-        question2: "What is 30/3?",
-        answers: ["scott","rand","tad","billy"],
-        correctAnswer: 0
+        question: "Who invented the internet?",
+        answers: ["bill gates and george bush", "david lee roth", "steve jobs and donald trump", "bob ross", "vincent cerf and robert kahn"],
+        correctAnswer: 4
     },
 
-{
-    question3: "when was the pop programmable computer invented?",
-    answers: ["b","c","g","h"],
-    correctAnswer: 2
-},
+    {
+        question: "what is the mouse?",
+        answers: ["a mammal", "a rodent", "device which controls cursor", "a small mammal", "all of the above"],
+        correctAnswer: 4
+    },
 
-{
-    question4: "when was the first programmable computer invented?",
-    answers: ["k","j","q","b"],
-    correctAnswer: 1
-}
+    {
+        question: "what does DOM stand for?",
+        answers: ["direct option modulator", "document object model", "device operating mouse", "dangerous oversized man", "drive over manhole"],
+        correctAnswer: 1
+    },
+    {
+        question: "How many keys are typically on a keyboard?",
+        answers: ["100", "101", "1913", "88", "96"],
+        correctAnswer: 1
+    },
 ];
+var go = function () {
 
-function onSubmit(){
-alert("working");
-var score = 0;
-var numofQuestions = 5;
-var answerarray= ['d','e','e','b','b'];
-
-var q1 = document.forms['quiz']['q1'].value;
-var q2 = document.forms['quiz']['q2'].value;
-var q3 = document.forms['quiz']['q3'].value;
-var q4 = document.forms['quiz']['q4'].value;
-var q5 = document.forms['quiz']['q5'].value;
+    for (i = 0; i < questions.length; i++) {
+        console.log(questions[i]);
+    }
 
 
-for(var i = 1; i <= numofQuestions; i++){
-if(eval('q' + i) == ""){
+};
 
-alert("you missed question number" + i);
-}
-}
+go();
 
-for(var i = 1; i <= numofQuestions; i++){
-if(eval('q' + i) == answerarray[i - 1]){
-    score ++;
-}
-}
-
-$('#QUIZ').hide();
-$("#results").text("<h2>"+"you scored"+score+"out of" + numofquestion+"<h2>");
-
-return false;
+function playGame(){
+    $("#mars").text(questions[count].question);
+    $("#a").html(questions[count].answers[0]);
+    $("#b").html(questions[count].answers[1]);
+    $("#c").html(questions[count].answers[2]);
+    $("#d").html(questions[count].answers[3]);
+    $("#e").html(questions[count].answers[4]);
+    number=11;
 
 
 }
 
+$(".answer").on("click", function () {
+   
+    if($(this).attr("value") == questions[count].correctAnswer){
+        wins++;
+        alert("CORRECT!")
+        count++;
+        playGame();
+    }
+    else{
+        losses++;
+        alert("INCORRECT!");
+        count++;
+        playGame();
+    }
+    resultspage();
+});
 
+function timesup() {
+    alert("TIMES UP!")
+    losses++;
+    count++;
+    playGame();
+    run();
+}
 
-
-
-
-
-
-
-
- //                   function loadquestions(){
-   //                     
-//
-  //                  }
-//
-//
-  //                  //how many right//
-    //                score= 0;
-//
-  //                  for(var i =0; i<questions.length; i++){
-    //                    response = prompt(question[i].prompt);
-      //                  if(response == question[i].answer){
-        ///                    score ++;
-           //             } else {
-             ///               alert("Wrong");
-                ///        }
-                   // }
-//submit button to results page//
-
-
-//question/answer display//
-
-//answer choice storage// answer choice compare//
-
-//answer choices correct/ 
-
-//answer choices wrong/
-
-//display results on click "submit button" or timesup/ 
+function resultspage() {
+    if(count === 4){
+        $("#QUIZ").hide();
+        $("#startbutton").hide();
+        $("#results").html("<h2>"+"correct guesses:"+wins+"."+"</h2>");
+        $("#resultsZ").html("<h2>"+"incorrect guesses:"+losses+"."+"</h2>");
+    }
+};
 
 
 
@@ -156,4 +153,5 @@ return false;
 
 
 
- 
+
+

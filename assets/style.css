@@ -26,9 +26,40 @@ body{
     font-family: 'Faster One', cursive;
 }
  
-#submit{
-    border: solid, grey, 60px;
+.answer{
+    display: flex;
+    border-radius: 45%;
+    border: groove, grey, 70px;
     margin: 5px,5px,20px,5px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    color:white;
+    /*background-image: url(https://vignette.wikia.nocookie.net/rocketleague/images/d/dd/Block_player_banner_icon.png/revision/latest?cb=20170930134055);
+    */
+    background-color:blue;
+}
+
+.answer:hover{
+    display: block;
+    border-radius: 45%;
+    border: groove, grey, 70px;
+    margin: 5px,5px,20px,5px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    color:white;
+    /*background-image: url(https://vignette.wikia.nocookie.net/rocketleague/images/d/dd/Block_player_banner_icon.png/revision/latest?cb=20170930134055);
+    */
+    background-color: red;
+}
+
+
+
+
+
+
+.card{
+    border: solid, grey, 60px;
+    margin: 5px,5px,80px,5px;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
     color:white;
@@ -36,14 +67,7 @@ body{
     background-size: contain, cover;
 }
 
-.card{
-    text-align: center;
-    background-color: black; 
-    border:grey,groove,13px;
-    margin-bottom: 5%;
-}
-
-    .mars{
+    #mars{
         background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/V3GIUd5/audio-sound-sine-wave-animation-loop-blue_vyzxuownl__F0000.png);
         background-size: contain;
         font-family: 'Press Start 2P', cursive;
@@ -52,18 +76,9 @@ body{
 
     }
 
-form{
-    border: solid, grey, 60px;
-    margin: 5px,5px,20px,5px;
-    font-family: 'Press Start 2P', cursive;
-    text-align: center;
-    color:white;
-    background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/WgeRenM/high-tech-blue-abstract-background-loop_ektkldbr__F0000.png);
-    background-size: contain, cover;
     
-}
 
-.done{
+#results { 
     border: solid, grey, 60px;
     margin: 5px,5px,20px,5px;
     font-family: 'Press Start 2P', cursive;
@@ -73,4 +88,15 @@ form{
     background-size: contain, cover;
 }
 
-    
+#resultsZ {
+    border: solid, grey, 60px;
+    margin: 5px,5px,20px,5px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    color:white;
+    background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/WgeRenM/high-tech-blue-abstract-background-loop_ektkldbr__F0000.png);
+    background-size: contain, cover;
+
+}
+
+
